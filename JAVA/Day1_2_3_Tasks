@@ -1,0 +1,29 @@
+Day 1  and Day 2 and Day 3:
+Task 1: Data Types/Variables
+Write a program that declares two integer variables, swaps their values without using a third variable, and prints the result.
+ 
+Task 2: Operators
+Create a program that simulates a simple calculator using command-line arguments to perform and print the result of addition, subtraction, multiplication, and division..
+ 
+Task 3: Control Flow
+Write a Java program that reads an integer and prints whether it is a prime number using a for loop and if statements.
+ 
+Task 4: Arrays - Declaration, Initialization, and Usage
+Create a program that declares an array of integers, initializes it with consecutive numbers, and prints the array in reverse order.
+ 
+Task 5: Two-Sum Problem
+a) Given an array of integers, write a program that finds if there are two numbers that add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Optimize the solution for time complexity.
+ 
+Task 6: Understanding Functions through Arrays
+a) Write a recursive function named SumArray that calculates and returns the sum of elements in an array, demonstarte with example.
+ 
+Task 7: Array Sorting and Searching
+a) Implement a function called BruteForceSort that sorts an array using the brute force approach. Use this function to sort an array created with InitializeArray.
+b) Write a function named PerformLinearSearch that searches for a specific element in an array and returns the index of the element if found or -1 if not found.
+ 
+Task 8: Advanced Array Operations
+a)  Implement a method SliceArray that takes an array, a starting index, and an end index, then returns a new array containing the elements from the start to the end index.
+b) Create a recursive function to find the nth element of a Fibonacci sequence and store the first n elements in an array.
+ 
+Task 9: String Operations
+Write a method that takes two strings, concatenates them, reverses the result, and then extracts the middle substring of the given length. Ensure your method handles edge cases, such as an empty string or a substring length larger than the concatenated string.
