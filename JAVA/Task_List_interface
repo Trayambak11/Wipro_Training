@@ -1,0 +1,40 @@
+Task: List interface
+Implement a method that takes a List as an argument and removes every second element from the list, then prints the resulting list.
+Solution:
+
+package com;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class RemoveEverySecondElement {
+
+    public static <T> void removeEverySecondElement(List<T> list) {
+        List<T> result = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++) {
+            if (i % 2 == 0) {
+                result.add(list.get(i));
+            }
+        }
+
+        list.clear();
+        list.addAll(result);
+    }
+
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(12);
+        numbers.add(22);
+        numbers.add(34);
+        numbers.add(46);
+        numbers.add(52);
+        numbers.add(68);
+
+        System.out.println("Original list: " + numbers);
+
+        removeEverySecondElement(numbers);
+
+        System.out.println("List after removing every second element: " + numbers);
+    }
+}
