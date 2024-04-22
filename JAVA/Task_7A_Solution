@@ -1,0 +1,33 @@
+package com;
+
+public class BruteForceSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {15,6,8,4,13,23,2,9};
+		bruteForce(a,a.length);
+		System.out.println("sorted array");
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+		private static void bruteForce(int[] a, int length) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<a.length;i++) {
+			for(int j=i+1;j<a.length;j++) {
+				int sort=0;
+				if(a[i]>a[j])
+				{
+					sort=a[i];
+					a[i]=a[j];
+					a[j]=sort;
+				}
+			}
+			
+		}
+		
+		
+	}
+
+}
