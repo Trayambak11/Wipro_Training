@@ -1,0 +1,42 @@
+public class Matrix {
+    private int rows;
+    private int columns;
+    private int[][] matrix;
+
+    public Matrix(int rows, int columns) {
+        if (rows <= 0 || columns <= 0) {
+            throw new IllegalArgumentException("Dimensions must be positive integers");
+        }
+        this.rows = rows;
+        this.columns = columns;
+        this.matrix = new int[rows][columns];
+    }
+
+    public void fillMatrix(int[][] values) {
+        if (values.length != rows || values[0].length != columns) {
+            throw new IllegalArgumentException("Input values dimensions do not match matrix dimensions");
+        }
+        this.matrix = values;
+    }
+
+    public void printMatrix() {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] values = {
+            {9, 2, 7},
+            {4, 8, 11},
+            {13, 5, 9}
+        };
+
+        Matrix matrix = new Matrix(3, 3);
+        matrix.fillMatrix(values);
+        matrix.printMatrix();
+    }
+}
