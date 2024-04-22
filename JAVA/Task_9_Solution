@@ -1,0 +1,32 @@
+package com.assignment;
+
+public class StringOperation {
+
+    public static String reverseConcatenateAndExtract(String str1, String str2, int length) {
+        
+        if (str1 == null || str2 == null || str1.isEmpty() || str2.isEmpty() || length <= 0) {
+            throw new IllegalArgumentException("Invalid input strings or length");
+        }
+        
+        String concatenated = str1 + str2;
+        
+        StringBuilder reversed = new StringBuilder(concatenated).reverse();
+        
+        if (length > reversed.length()) {
+            throw new IllegalArgumentException("Substring length exceeds the reversed string length");
+        }
+        
+        int startIndex = (reversed.length() - length) / 2;
+        int endIndex = startIndex + length;
+        return reversed.substring(startIndex, endIndex);
+    }
+
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        int length = 5;
+
+        String result = reverseConcatenateAndExtract(str1, str2, length);
+        System.out.println("Result: " + result);
+    }
+}
